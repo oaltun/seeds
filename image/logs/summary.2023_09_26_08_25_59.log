@@ -1,0 +1,1445 @@
+---- 2023-09-26 08:25:59,984 - {"role": "system", "content": "# Goal Description\ngoal:\n  main: Improve this program to optimize the use of LLM models.\n  subgoals:\n    - Implement unit and integration testing with a minimum of 90% coverage. Keep the coverage up when you add new code.\n    - Enable API calling capability.\n    - Equip the program with code writing abilities.\n    - Facilitate simulations of multi-agent chat interactions oriented towards a specified goal.\n\n# Project Rules\nrules:\n  project_management:\n    - Maintain a detailed project breakdown in 'tasks.yaml'. Ensure the terminal nodes (leafs) of the task hierarchy are actionable by either the program or the user (lets call him Ozi). add \"Completed\" to the completed nodes. If a leaf node is to be done by Ozi, write (assigned to @Ozi) to the node. All other nodes will be assigned to you by default.\n    - If the program requires any input or resource from Ozi to enhance its functionality, it should record the details in 'request_to_user.yaml' along with a clear explanation.\n    - Ozi reserves the right to introduce additional goals in the future.\n  \n  coding_guidelines:\n    - Prioritize adding tests when making improvements or writing new programs.\n    - Execute tests and document the results in a designated file. This file can later be reviewed to assess the effectiveness of recent modifications.\n    \n  version_control:\n    - An initialized git repository is present in the current directory.\n    - Before making changes to any file, create a new branch. If tests are successful, you may commit and merge changes to the main branch. Failing tests prohibit these actions.\n    - Commit frequently to avoid loss of progress, especially since Ozi can halt and restart the program at any time.\n  \n  naming_and_structure:\n    - Ensure all files, variables, and other elements are named logically and clearly.\n    - Maintain a coherent directory structure for ease of navigation and understanding.\n\n\n\n\n\n\n"}
+---- 2023-09-26 08:26:02,002 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:03,481 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:04,986 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:06,503 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:07,779 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:09,364 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:10,976 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:12,684 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:14,942 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:17,075 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:18,499 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:19,907 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:21,331 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:22,788 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:24,179 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:25,676 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:27,011 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:28,377 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:29,625 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:30,995 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:32,966 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:34,804 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:36,069 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:37,799 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:39,091 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:40,348 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:41,839 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:43,155 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:44,417 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:45,691 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:46,954 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:48,222 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:49,922 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:51,184 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:54,023 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:55,395 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:56,750 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:58,016 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:26:59,585 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:00,840 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:02,848 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:04,104 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:05,353 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:06,609 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:07,872 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:09,528 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:10,804 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:12,065 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:13,320 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:15,676 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:16,942 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:18,475 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:19,729 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:20,991 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:22,257 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:23,509 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:24,847 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:26,133 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:27,461 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:28,766 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:30,036 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:31,292 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:32,554 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:33,808 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:35,072 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:36,334 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:37,592 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:38,837 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:40,644 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:41,909 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:43,177 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:44,672 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:46,176 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:47,430 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:48,733 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:27:50,002 - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.

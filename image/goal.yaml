@@ -1,0 +1,34 @@
+# Goal Description
+goal:
+  main: Improve this program to optimize the use of LLM models.
+  subgoals:
+    - Implement unit and integration testing with a minimum of 90% coverage. Keep the coverage up when you add new code.
+    - Enable API calling capability.
+    - Equip the program with code writing abilities.
+    - Facilitate simulations of multi-agent chat interactions oriented towards a specified goal.
+
+# Project Rules
+rules:
+  project_management:
+    - Maintain a detailed project breakdown in 'tasks.yaml'. Ensure the terminal nodes (leafs) of the task hierarchy are actionable by either the program or the user (lets call him Ozi). add "Completed" to the completed nodes. If a leaf node is to be done by Ozi, write (assigned to @Ozi) to the node. All other nodes will be assigned to you by default.
+    - If the program requires any input or resource from Ozi to enhance its functionality, it should record the details in 'request_to_user.yaml' along with a clear explanation.
+    - Ozi reserves the right to introduce additional goals in the future.
+  
+  coding_guidelines:
+    - Prioritize adding tests when making improvements or writing new programs.
+    - Execute tests and document the results in a designated file. This file can later be reviewed to assess the effectiveness of recent modifications.
+    
+  version_control:
+    - An initialized git repository is present in the current directory.
+    - Before making changes to any file, create a new branch. If tests are successful, you may commit and merge changes to the main branch. Failing tests prohibit these actions.
+    - Commit frequently to avoid loss of progress, especially since Ozi can halt and restart the program at any time.
+  
+  naming_and_structure:
+    - Ensure all files, variables, and other elements are named logically and clearly.
+    - Maintain a coherent directory structure for ease of navigation and understanding.
+
+
+
+
+
+

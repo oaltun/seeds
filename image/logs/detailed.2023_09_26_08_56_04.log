@@ -1,0 +1,96 @@
+---- 2023-09-26 08:56:04,923 - DetailedLogger - INFO - {"role": "system", "content": "# Goal Description\ngoal:\n  main: Improve this program to optimize the use of LLM models.\n  subgoals:\n    - Implement unit and integration testing with a minimum of 90% coverage. Keep the coverage up when you add new code.\n    - Enable API calling capability.\n    - Equip the program with code writing abilities.\n    - Facilitate simulations of multi-agent chat interactions oriented towards a specified goal.\n\n# Project Rules\nrules:\n  project_management:\n    - Maintain a detailed project breakdown in 'tasks.yaml'. Ensure the terminal nodes (leafs) of the task hierarchy are actionable by either the program or the user (lets call him Ozi). add \"Completed\" to the completed nodes. If a leaf node is to be done by Ozi, write (assigned to @Ozi) to the node. All other nodes will be assigned to you by default.\n    - If the program requires any input or resource from Ozi to enhance its functionality, it should record the details in 'request_to_user.yaml' along with a clear explanation.\n    - Ozi reserves the right to introduce additional goals in the future.\n  \n  coding_guidelines:\n    - Prioritize adding tests when making improvements or writing new programs.\n    - Execute tests and document the results in a designated file. This file can later be reviewed to assess the effectiveness of recent modifications.\n    \n  version_control:\n    - An initialized git repository is present in the current directory.\n    - Before making changes to any file, create a new branch. If tests are successful, you may commit and merge changes to the main branch. Failing tests prohibit these actions.\n    - Commit frequently to avoid loss of progress, especially since Ozi can halt and restart the program at any time.\n  \n  naming_and_structure:\n    - Ensure all files, variables, and other elements are named logically and clearly.\n    - Maintain a coherent directory structure for ease of navigation and understanding.\n\n\n\n\n\n\n"}
+---- 2023-09-26 08:56:06,852 - DetailedLogger - ERROR - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:56:08,510 - DetailedLogger - ERROR - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:56:10,174 - DetailedLogger - ERROR - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:56:11,773 - DetailedLogger - ERROR - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
+---- 2023-09-26 08:56:13,460 - DetailedLogger - ERROR - An exception occurred
+Traceback (most recent call last):
+  File "/app/image/main.py", line 40, in main
+    airequests: AIRequests = openai.ChatCompletion.create(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 126, in new_chatcompletion_sync
+    response, error = retry_sync(
+  File "/app/venv/lib/python3.10/site-packages/instructor/patch.py", line 86, in retry_sync
+    response = func(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/app/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: Invalid schema for function 'AIRequests'. Please ensure it is a valid JSON Schema.
