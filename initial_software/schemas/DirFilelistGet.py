@@ -4,10 +4,12 @@ import pydantic
 from pydantic import validator
 
 import instructor
-instructor.patch() # Enables the response_model 
+from instructor import OpenAISchema
 
-class DirFilelistGet(pydantic.BaseModel):
+# instructor.patch() # Enables the response_model 
+
+class DirFilelistGet(OpenAISchema):
     "Data for creating a recursive directory listing like 'find' in linux."
     directory: Optional[str] = "."
-    pattern: Optional[str] = '*',
+    pattern: Optional[str] = '*'
     excludes: Optional[List[str]] = ['/__pycache__/','/.git/',]

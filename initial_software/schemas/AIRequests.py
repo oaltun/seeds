@@ -6,9 +6,11 @@ import pydantic
 from pydantic import validator, Field
 
 import instructor
-instructor.patch() # Enables the response_model 
+from instructor import OpenAISchema
 
-class AIRequests(pydantic.BaseModel):
+# instructor.patch() # Enables the response_model 
+
+class AIRequests(OpenAISchema):
     "AI can ask system for information to understand its environment by file_to_read and dir_filelist_get. AI can also modify/rewrite using file_to_read."
     intent: str = Field("", description="AI's aim for this request", example="I want to see contents of the directory")
     file_to_read: Optional[str] = None
