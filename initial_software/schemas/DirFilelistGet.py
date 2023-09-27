@@ -1,15 +1,14 @@
-from pathlib import Path
-from typing import List, Optional
-import pydantic
-from pydantic import validator
+from pydantic import BaseModel, Field, validator
+from typing import Optional, List
 
-import instructor
-from instructor import OpenAISchema
+class DirFilelistGet(BaseModel):
+    directory: Optional[str] = Field(default=".", description="The directory to search in")
+    pattern: Optional[str] = Field(default="*", description="The pattern to search for")
+    excludes: Optional[List[str]] = Field(default=['/__pycache__/', '/.git/', 'venv', '.env', '/.condaenv/', '/env/'], description="List of excluded directories")
 
-# instructor.patch() # Enables the response_model 
-
-class DirFilelistGet(OpenAISchema):
-    "Data for creating a recursive directory listing like 'find' in linux."
-    directory: Optional[str] = "."
-    pattern: Optional[str] = '*'
-    excludes: Optional[List[str]] = ['/__pycache__/','/.git/',]
+    @validator("directory")
+    def validate_directory(cls, value):
+        allowed_prefixes = ["/app/env1", "/app/env2"]
+        if not any(value.startswith(prefix) for prefix in allowed_prefixes):
+            raise ValueError("Directory must be within /app/env1 or /app/env2")
+        return value

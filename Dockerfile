@@ -2,9 +2,6 @@ FROM python:3.10-bookworm
 
 
 
-WORKDIR /app
-COPY loop.py ./
-
 
 
 WORKDIR /app/env1
@@ -15,3 +12,7 @@ RUN /app/env1/venv/bin/python3 -m pip install --no-cache-dir -r requirements.txt
 
 
 RUN cp -r /app/env1 /app/env2
+
+
+WORKDIR /app
+COPY loop.py ./
